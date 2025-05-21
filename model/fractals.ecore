@@ -3,7 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fractals" nsURI="http://www.example.org/fractals" nsPrefix="fractals">
   <eClassifiers xsi:type="ecore:EClass" name="CustomShape" eSuperTypes="#//Shape">
     <eStructuralFeatures xsi:type="ecore:EReference" name="containedShapes" lowerBound="1"
-        upperBound="-1" eType="#//Shape" containment="true"/>
+        upperBound="-1" eType="#//Shape" containment="true" eOpposite="#//Shape/parent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Shape" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
@@ -11,6 +11,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="scale" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rotation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//CustomShape"
+        eOpposite="#//CustomShape/containedShapes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Square" eSuperTypes="#//Shape"/>
   <eClassifiers xsi:type="ecore:EClass" name="Triangle" eSuperTypes="#//Shape"/>

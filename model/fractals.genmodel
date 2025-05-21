@@ -17,6 +17,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fractals.ecore#//Shape/y"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fractals.ecore#//Shape/scale"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fractals.ecore#//Shape/rotation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fractals.ecore#//Shape/parent"/>
     </genClasses>
     <genClasses ecoreClass="fractals.ecore#//Square"/>
     <genClasses ecoreClass="fractals.ecore#//Triangle"/>
